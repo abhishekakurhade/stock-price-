@@ -11,7 +11,7 @@ st.markdown("This app performs time series forecasting on Reliance stock prices 
 # Load and preprocess data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/abhis/OneDrive/Desktop/stock time series/RELIANCE.csv")
+    df = pd.read_csv("RELIANCE.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df = df[['Date', 'Close']].rename(columns={"Date": "ds", "Close": "y"})
     return df
